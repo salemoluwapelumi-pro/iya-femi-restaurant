@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Iya Femi Restaurant, Minna | Prices & Online Ordering</title>
+  <meta name="description" content="Browse the Iya Femi Restaurant menu: swallow combos, jollof rice, egusi soup, proteins and drinks with current prices. Order online for delivery in Minna.">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Our Menu</h1>
+      <div id="closed-banner" class="alert alert-info hidden"></div>
+
+      <div class="menu-controls">
+        <div class="category-pills" id="category-pills" role="tablist" aria-label="Menu categories">
+          <button class="active" data-slug="">All</button>
+        </div>
+        <div class="search-sort">
+          <input type="text" id="search-input" placeholder="Search meals…" aria-label="Search meals">
+          <select id="sort-select" aria-label="Sort meals">
+            <option value="">Default order</option>
+            <option value="price_asc">Price: low → high</option>
+            <option value="price_desc">Price: high → low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="menu-grid" class="grid grid-3">
+        <div class="loading"><div class="spinner"></div>Loading menu…</div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/menu.js"></script>
+</body>
+</html>

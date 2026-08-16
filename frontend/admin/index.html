@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Iya Femi Restaurant</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="admin">
+
+  <!-- Login -->
+  <div class="login-wrap" id="login-view">
+    <form class="login-card" id="login-form">
+      <div class="brand" style="display:flex;align-items:center;gap:0.6rem">
+        <img src="/assets/logo.svg" alt="Iya Femi logo" width="44" height="44">
+        <span class="brand-name">Iya Femi Admin</span>
+      </div>
+      <div id="login-alert" class="hidden"></div>
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-green" style="width:100%">Sign In</button>
+    </form>
+  </div>
+
+  <!-- Admin shell -->
+  <div class="admin-shell hidden" id="admin-view">
+    <div class="admin-topbar">
+      <img src="/assets/logo.svg" alt="" width="34" height="34">
+      <strong>Iya Femi Admin</strong>
+      <div class="spacer"></div>
+      <span id="admin-name" class="muted" style="color:#cfe0cf"></span>
+      <button class="btn btn-sm btn-outline" onclick="logout()">Logout</button>
+    </div>
+    <nav class="admin-nav" id="admin-nav">
+      <button data-tab="dashboard" class="active">Dashboard</button>
+      <button data-tab="orders">Orders</button>
+      <button data-tab="menu">Menu</button>
+      <button data-tab="categories">Categories</button>
+      <button data-tab="zones">Delivery</button>
+      <button data-tab="reviews">Reviews</button>
+      <button data-tab="settings">Settings</button>
+      <button data-tab="audit">Audit Log</button>
+    </nav>
+    <main class="admin-main" id="admin-main">
+      <div class="loading"><div class="spinner"></div>Loading…</div>
+    </main>
+  </div>
+
+  <!-- Generic modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

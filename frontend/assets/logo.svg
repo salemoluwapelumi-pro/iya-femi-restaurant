@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Placeholder logo: replace with the official Iya Femi Restaurant logo -->
+  <circle cx="60" cy="60" r="56" fill="#1b5e20"/>
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#f9a825" stroke-width="4"/>
+  <path d="M28 66c0 15 14 26 32 26s32-11 32-26H28z" fill="#f9a825"/>
+  <path d="M24 66h72" stroke="#fff8e1" stroke-width="4" stroke-linecap="round"/>
+  <path d="M45 52c0-5 4-6 4-10 0-2-1-4-1-4M60 50c0-5 4-6 4-10 0-2-1-4-1-4M75 52c0-5 4-6 4-10 0-2-1-4-1-4" stroke="#fff8e1" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="60" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#fff8e1">IYA FEMI</text>
+</svg>
