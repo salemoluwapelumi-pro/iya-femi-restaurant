@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Iya Femi Restaurant, Minna</title>
+  <meta name="description" content="Contact Iya Femi Restaurant in Minna — phone numbers, WhatsApp, address, opening hours and directions. Leave a review of your experience.">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Contact Us</h1>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📞 Phone</h3>
+          <p id="contact-phones" class="muted"></p>
+          <a id="whatsapp-link" class="btn btn-green btn-sm" target="_blank" rel="noopener" href="#">Chat on WhatsApp</a>
+        </div>
+        <div class="info-card">
+          <h3>📍 Address</h3>
+          <p id="contact-address" class="muted"></p>
+          <a id="contact-directions" class="btn btn-green btn-sm" target="_blank" rel="noopener" href="#">Get Directions</a>
+        </div>
+        <div class="info-card">
+          <h3>🕐 Opening Hours</h3>
+          <table class="hours-table" id="contact-hours"></table>
+        </div>
+      </div>
+
+      <section id="review" class="section" style="padding-bottom:0">
+        <h2 class="section-title">Leave a Review</h2>
+        <form id="review-form" class="info-card" style="max-width:560px;margin:0 auto">
+          <div id="review-alert" class="hidden"></div>
+          <div class="form-group">
+            <label for="review_name">Your name *</label>
+            <input type="text" id="review_name" required maxlength="140">
+          </div>
+          <div class="form-group">
+            <label>Your rating *</label>
+            <div class="star-input" id="star-input" role="radiogroup" aria-label="Rating">
+              <button type="button" data-v="1" aria-label="1 star">★</button>
+              <button type="button" data-v="2" aria-label="2 stars">★</button>
+              <button type="button" data-v="3" aria-label="3 stars">★</button>
+              <button type="button" data-v="4" aria-label="4 stars">★</button>
+              <button type="button" data-v="5" aria-label="5 stars">★</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review_comment">Your review</label>
+            <textarea id="review_comment" rows="3" maxlength="2000" placeholder="Tell us about the food and the service…"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="review_order">Order number <span class="muted">(optional — marks your review as a verified order)</span></label>
+            <input type="text" id="review_order" maxlength="30" placeholder="e.g. IF-ABC123XYZ">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Submit Review</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

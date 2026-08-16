@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iya Femi Restaurant — Authentic Nigerian Food in Minna | Order Online</title>
+  <meta name="description" content="Iya Femi Restaurant on Broadcasting Road, Minna serves affordable Nigerian dishes — amala, pounded yam, jollof rice, egusi and more. Order online for delivery or pickup.">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="open-badge" id="open-badge">Checking hours…</span>
+      <h1>Authentic Nigerian Cuisine<br>in the Heart of Minna</h1>
+      <p class="tagline" id="hero-tagline">Affordable, generous portions of amala, pounded yam, jollof rice, egusi and more — freshly made on Broadcasting Road.</p>
+      <div class="hero-cta">
+        <a href="/menu.html" class="btn btn-primary">Order Now</a>
+        <a href="/menu.html" class="btn btn-outline">View Menu</a>
+        <a href="#location" class="btn btn-outline">Get Directions</a>
+        <a href="/contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Meals</h2>
+      <div id="featured-grid" class="grid grid-4">
+        <div class="loading"><div class="spinner"></div>Loading featured meals…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">Why Minna Loves Iya Femi</h2>
+      <p style="max-width:720px;margin:0 auto 1.5rem;text-align:center" id="about-text"></p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🍲 Traditional Recipes</h3>
+          <p class="muted">Time-tested local recipes: abula (amala + ewedu + gbegiri), pounded yam, native rice and signature gizdodo.</p>
+        </div>
+        <div class="info-card">
+          <h3>💰 Honest Prices</h3>
+          <p class="muted">Generous portions at prices that make sense — meals from ₦800.</p>
+        </div>
+        <div class="info-card">
+          <h3>🛵 Delivery Across Minna</h3>
+          <p class="muted">From Tunga to FUT Gidan Kwano campus — we deliver to all major neighbourhoods.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="location">
+    <div class="container">
+      <h2 class="section-title">Find Us</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📍 Location</h3>
+          <p id="address-text" class="muted"></p>
+          <a id="directions-link" class="btn btn-green btn-sm" target="_blank" rel="noopener" href="#">Open in Google Maps</a>
+        </div>
+        <div class="info-card">
+          <h3>🕐 Opening Hours</h3>
+          <table class="hours-table" id="hours-table"></table>
+        </div>
+        <div class="info-card">
+          <h3>📞 Call to Order</h3>
+          <p id="phones-block" class="muted"></p>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem">
+        <iframe class="map-embed" id="map-embed" title="Iya Femi Restaurant on Google Maps" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div id="reviews-grid" class="grid grid-3">
+        <div class="loading"><div class="spinner"></div>Loading reviews…</div>
+      </div>
+      <p style="text-align:center;margin-top:1.5rem">
+        <a href="/contact.html#review" class="btn btn-green">Leave a Review</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

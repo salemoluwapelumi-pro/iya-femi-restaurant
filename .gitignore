@@ -1,0 +1,5 @@
+node_modules/
+.env
+frontend/assets/uploads/*
+!frontend/assets/uploads/.gitkeep
+*.log

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order — Iya Femi Restaurant</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="section">
+    <div class="container" style="max-width:640px">
+      <h1 class="section-title">Track Your Order</h1>
+
+      <form id="track-form" class="info-card">
+        <div class="form-group">
+          <label for="order_number">Order number</label>
+          <input type="text" id="order_number" placeholder="e.g. IF-ABC123XYZ" required>
+        </div>
+        <div class="form-group">
+          <label for="track_phone">Phone number used on the order</label>
+          <input type="tel" id="track_phone" placeholder="e.g. 08065249697" required>
+        </div>
+        <button type="submit" class="btn btn-green" id="track-btn" style="width:100%">Track Order</button>
+      </form>
+
+      <div id="track-error" class="hidden"></div>
+
+      <div id="track-result" class="hidden">
+        <div class="info-card" style="margin-top:1.5rem">
+          <h2 style="font-size:1.2rem">Order <span id="result-number"></span></h2>
+          <p><span class="badge badge-featured" id="result-status"></span>
+             <span class="badge badge-cat" id="result-payment"></span></p>
+          <ul class="timeline" id="result-timeline"></ul>
+          <h3 style="font-size:1rem">Items</h3>
+          <table class="summary-table" id="result-items"></table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/track.js"></script>
+</body>
+</html>

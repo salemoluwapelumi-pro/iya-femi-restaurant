@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Iya Femi Restaurant</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Checkout</h1>
+      <div id="checkout-alert" class="hidden"></div>
+
+      <div id="checkout-wrap" class="checkout-layout">
+        <form id="checkout-form" novalidate>
+          <h2 style="font-size:1.2rem">Your Details</h2>
+          <div class="form-group">
+            <label for="customer_name">Full name *</label>
+            <input type="text" id="customer_name" required maxlength="140" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number * <span class="muted">(e.g. 0806 524 9697)</span></label>
+            <input type="tel" id="phone" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span class="muted">(optional)</span></label>
+            <input type="email" id="email" maxlength="160" autocomplete="email">
+          </div>
+
+          <h2 style="font-size:1.2rem;margin-top:1.5rem">Order Type</h2>
+          <div class="form-group radio-row" role="radiogroup" aria-label="Order type">
+            <label class="radio-pill"><input type="radio" name="order_type" value="delivery" checked><span>🛵 Delivery</span></label>
+            <label class="radio-pill"><input type="radio" name="order_type" value="pickup"><span>🥡 Pickup</span></label>
+            <label class="radio-pill"><input type="radio" name="order_type" value="dine_in"><span>🍽️ Dine-in</span></label>
+          </div>
+
+          <div id="delivery-fields">
+            <div class="form-group">
+              <label for="delivery_zone">Delivery zone *</label>
+              <select id="delivery_zone"></select>
+              <p class="muted" id="zone-areas" style="font-size:0.85rem;margin:0.3rem 0 0"></p>
+            </div>
+            <div class="form-group">
+              <label for="delivery_address">Delivery address *</label>
+              <textarea id="delivery_address" rows="2" maxlength="500" autocomplete="street-address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="delivery_instructions">Delivery instructions <span class="muted">(optional)</span></label>
+              <input type="text" id="delivery_instructions" maxlength="500" placeholder="e.g. Call when you reach the gate">
+            </div>
+          </div>
+
+          <h2 style="font-size:1.2rem;margin-top:1.5rem">Payment Method</h2>
+          <div class="form-group radio-row" role="radiogroup" aria-label="Payment method">
+            <label class="radio-pill"><input type="radio" name="payment_method" value="bank_transfer" checked><span>🏦 Bank Transfer</span></label>
+            <label class="radio-pill"><input type="radio" name="payment_method" value="cash"><span>💵 Cash on Delivery / Pickup</span></label>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Order notes <span class="muted">(optional)</span></label>
+            <textarea id="notes" rows="2" maxlength="500" placeholder="e.g. Extra pepper, no onions"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="place-order-btn" style="width:100%">Place Order</button>
+        </form>
+
+        <aside class="info-card">
+          <h2 style="font-size:1.2rem">Order Summary</h2>
+          <table class="summary-table" id="summary-table"></table>
+          <p class="muted" style="font-size:0.85rem">Final total is confirmed by the restaurant at current menu prices.</p>
+        </aside>
+      </div>
+
+      <div id="confirmation" class="hidden">
+        <div class="alert alert-success" style="text-align:center">
+          <h2>🎉 Order Received!</h2>
+          <p>Your order number is <strong id="conf-number"></strong>. Save it to track your order.</p>
+        </div>
+        <div class="info-card" style="max-width:520px;margin:0 auto">
+          <table class="summary-table" id="conf-table"></table>
+          <div id="conf-bank" class="hidden">
+            <h3 style="font-size:1.05rem">Bank Transfer Details</h3>
+            <p class="muted" style="font-size:0.85rem">Transfer the total to the account below, then keep your transfer receipt. Your order is confirmed once payment is verified.</p>
+            <table class="summary-table" id="conf-bank-table"></table>
+          </div>
+          <div style="display:flex;gap:0.5rem;margin-top:1rem;flex-wrap:wrap">
+            <a class="btn btn-green" id="conf-track-link" href="#">Track Order</a>
+            <a class="btn btn-primary" href="/menu.html">Order More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
