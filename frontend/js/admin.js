@@ -139,7 +139,7 @@ TABS.orders = async (filter = '') => {
         <td>${escapeHtml(o.order_type)}</td>
         <td>${naira(o.total)}</td>
         <td>
-          <select class="status-select" onchange="changeOrderStatus(${o.id}, this.value, this)">
+          <select class="status-select" data-prev="${o.status}" onchange="changeOrderStatus(${o.id}, this.value, this)">
             ${ORDER_STATUSES.map((s) => `<option value="${s}" ${s === o.status ? 'selected' : ''}>${s}</option>`).join('')}
           </select>
         </td>
@@ -153,6 +153,7 @@ TABS.orders = async (filter = '') => {
 async function changeOrderStatus(id, status, el) {
   try {
     await AdminAPI.patch(`/admin/orders/${id}/status`, { status });
+    el.dataset.prev = status;
     showToast(`Order status updated to ${status}`);
   } catch (err) {
     showToast(err.message);
